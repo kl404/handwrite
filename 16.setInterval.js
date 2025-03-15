@@ -1,26 +1,15 @@
-let timeId = null;
-
-function mySetInterval(callback, delay, ...args) {
-  let fn = function () {
-    timeId = setTimeout(() => {
-      callback.call(this, args);
-      //延时，并执行回调函数
-      fn();
-    }, delay);
-  };
-  fn();
+function myInterval(callback, delay = 1000){
+  let timerId;
+    function fn(){
+        callback();
+        timerId = setTimeout(fn, delay);
+        console.log(timerId)
+    }
+    timerId = setTimeout(fn, delay)
 }
 
-function myClearInterval(id) {
-  clearInterval(timeId);
+
+function test(){
+    console.log('test')
 }
-
-// 测试代码
-mySetInterval(
-  (name) => {
-    console.log(name);
-  },
-  1000,
-  "weqwe"
-);
-
+myInterval(test)
