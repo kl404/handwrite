@@ -43,3 +43,8 @@ function throttle(fn,delay){
 
       }
   }
+
+
+class Promise{
+    
+}
