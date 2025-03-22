@@ -13,12 +13,10 @@ function flatten3(){
     return JSON.parse(tmp2);
 }
 function flatten4(){
-    return arr.flat(1);
+    return arr.flat(Infinity);
 }
-// 普通递归
 function flatten5(){
     const res = [];
-
     function dfs(arr){
         for(let i = 0;i<arr.length;i++){
             if(Array.isArray(arr[i])){
@@ -31,17 +29,15 @@ function flatten5(){
     dfs(arr);
     return res;
 }
-// reduce递归
 function flatten6(){
     function dfs(arr){
         return arr.reduce((acc, cur)=>{
             return acc.concat(Array.isArray(cur) ? dfs(cur) : cur)
         }, [])    
     }
-
     return dfs(arr);
 
 }
 
-console.log(flatten4());
+
 

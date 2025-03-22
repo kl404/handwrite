@@ -1,6 +1,5 @@
 // 获取所有图片
 const images = document.querySelectorAll("img[data-src]");
-
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     // 当图片进入视口
@@ -14,5 +13,5 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
-// 观察所有图片
 images.forEach((img) => observer.observe(img));
+  

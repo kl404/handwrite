@@ -1,7 +1,6 @@
 function sum(a, b, c, d) {
   return a + b + c + d;
 }
-
 // 无限参数
 function curry1(callback) {
   let params = [];
@@ -16,7 +15,6 @@ function curry1(callback) {
     }
   };
 }
-
 // 有限参数
 function curry2(callback) {
   let params = [];

@@ -34,9 +34,7 @@ const obj = {
 
 
 function flatten(){
-    
     const res = [];
-
     function dfs(node, pid){
         if(!node) return;
         const obj = {
@@ -50,7 +48,6 @@ function flatten(){
         }
     }
     dfs(obj, null);
-    
     return res;
 }
 

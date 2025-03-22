@@ -16,7 +16,6 @@ function treeify() {
       ...node,
       children: [],
     };
-
     const list = arr.filter((item) => {
       return item.pid === node.id;
     });
